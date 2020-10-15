@@ -14,28 +14,25 @@
  * limitations under the License.
  */
 
-package io.spring.start.site.extension.sample;
+package io.spring.start.site.extension.amwell.sample.postgres;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
+import io.spring.start.site.extension.amwell.condition.ConditionalOnAmwellPostgresDb;
 
-import io.spring.initializr.generator.project.contributor.ProjectContributor;
+import org.springframework.context.annotation.Bean;
 
 /**
- * Amwell Sample Contributor.
+ * Amwell Postgres DB Sample Code Contributor Configuration.
  *
  * @author Raghu Karamel
  */
-public class SampleContributor implements ProjectContributor {
+@ProjectGenerationConfiguration
+@ConditionalOnAmwellPostgresDb("sample")
+class PostgresDbContributorConfiguration {
 
-	@Override
-	public void contribute(Path projectRoot) throws IOException {
-		Path file = Files.createFile(projectRoot.resolve("hello.txt"));
-		try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))) {
-			writer.println("Test");
-		}
+	@Bean
+	PostgresDbContributor postgresDbContributor() {
+		return new PostgresDbContributor();
 	}
 
 }

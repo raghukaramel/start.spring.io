@@ -1,4 +1,10 @@
 io.spring.initializr.generator.project.ProjectGenerationConfiguration=\
+io.spring.start.site.extension.amwell.sample.bamboo.BambooContributorConfiguration,\
+io.spring.start.site.extension.amwell.sample.docker.DockerContributorConfiguration,\
+io.spring.start.site.extension.amwell.sample.dynamodb.DynamoDbContributorConfiguration,\
+io.spring.start.site.extension.amwell.sample.mongodb.MongoDbContributorConfiguration,\
+io.spring.start.site.extension.amwell.sample.redis.RedisContributorConfiguration,\
+io.spring.start.site.extension.amwell.sample.postgres.PostgresDbContributorConfiguration,\
 io.spring.start.site.extension.build.gradle.GradleProjectGenerationConfiguration,\
 io.spring.start.site.extension.build.maven.MavenProjectGenerationConfiguration,\
 io.spring.start.site.extension.dependency.DependencyProjectGenerationConfiguration,\
@@ -12,5 +18,4 @@ io.spring.start.site.extension.dependency.springintegration.SpringIntegrationPro
 io.spring.start.site.extension.dependency.springrestdocs.SpringRestDocsProjectGenerationConfiguration,\
 io.spring.start.site.extension.dependency.testcontainers.TestcontainersProjectGenerationConfiguration,\
 io.spring.start.site.extension.description.DescriptionProjectGenerationConfiguration,\
-io.spring.start.site.extension.code.kotlin.KotlinProjectGenerationConfiguration,\
-io.spring.start.site.extension.sample.SampleContributorConfiguration
+io.spring.start.site.extension.code.kotlin.KotlinProjectGenerationConfiguration

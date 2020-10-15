@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.spring.start.site.extension.condition;
+package io.spring.start.site.extension.amwell.condition;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -25,15 +25,15 @@ import java.lang.annotation.Target;
 import org.springframework.context.annotation.Conditional;
 
 /**
- * Amwell Sample Condition Annotation.
+ * Amwell Bamboo Condition Annotation.
  *
  * @author Raghu Karamel
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.METHOD })
 @Documented
-@Conditional(OnAmwellSampleCondition.class)
-public @interface ConditionalOnAmwellSample {
+@Conditional(OnAmwellBambooCondition.class)
+public @interface ConditionalOnAmwellBamboo {
 
 	String value();
 

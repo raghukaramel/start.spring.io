@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package io.spring.start.site.extension.condition;
+package io.spring.start.site.extension.amwell.sample.redis;
 
-import io.spring.initializr.generator.condition.ProjectGenerationCondition;
-import io.spring.initializr.generator.project.ProjectDescription;
+import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
+import io.spring.start.site.extension.amwell.condition.ConditionalOnAmwellRedis;
 
-import org.springframework.context.annotation.ConditionContext;
-import org.springframework.core.type.AnnotatedTypeMetadata;
+import org.springframework.context.annotation.Bean;
 
 /**
- * Amwell Sample Condition.
+ * Amwell Redis Sample Code Contributor Configuration.
  *
  * @author Raghu Karamel
  */
-public class OnAmwellSampleCondition extends ProjectGenerationCondition {
+@ProjectGenerationConfiguration
+@ConditionalOnAmwellRedis("sample")
+class RedisContributorConfiguration {
 
-	@Override
-	protected boolean matches(ProjectDescription description, ConditionContext context,
-			AnnotatedTypeMetadata metadata) {
-		return (description.getRequestedDependencies().containsKey("amwelldynamodb")) ? true : false;
+	@Bean
+	RedisContributor redisContributor() {
+		return new RedisContributor();
 	}
 
 }

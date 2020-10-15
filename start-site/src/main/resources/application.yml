@@ -204,20 +204,20 @@ initializr:
         version: 1.3.4
         includeSpringBootBom : false
   dependencies:
-    - name: Amwell Sample Codes
+    - name: Amwell Sample Code
       content:
         - name: Dynamo DB
           id: amwelldynamodb
-          description: Amwell Sample Code for using Dynamo DB with in micro service
+          description: Sample Code for using Dynamo DB with in Amwell micro service
         - name: Mongo DB
           id: amwellmongodb
-          description: Amwell Sample Code for using Mongo DB with in micro service
+          description: Sample Code for using Mongo DB with in Amwell micro service
         - name: Redis
-          id: amwellredisdb
-          description: Amwell Sample Code for using Redis DB with in micro service
+          id: amwellredis
+          description: Sample Code for using Redis DB with in Amwell micro service
         - name: Postgres DB
           id: amwellpostgresdb
-          description: Amwell Sample Code for using Postgres DB with in micro service
+          description: Sample Code for using Postgres DB with in Amwell micro service
     - name: Developer Tools
       content:
         - name: Spring Boot DevTools

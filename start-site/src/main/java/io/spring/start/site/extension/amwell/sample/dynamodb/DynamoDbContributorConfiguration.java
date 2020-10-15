@@ -14,25 +14,25 @@
  * limitations under the License.
  */
 
-package io.spring.start.site.extension.sample;
+package io.spring.start.site.extension.amwell.sample.dynamodb;
 
 import io.spring.initializr.generator.project.ProjectGenerationConfiguration;
-import io.spring.start.site.extension.condition.ConditionalOnAmwellSample;
+import io.spring.start.site.extension.amwell.condition.ConditionalOnAmwellDynamoDb;
 
 import org.springframework.context.annotation.Bean;
 
 /**
- * Amwell Sample Contributor Configuration.
+ * Amwell Dynamo DB Sample Code Contributor Configuration.
  *
  * @author Raghu Karamel
  */
 @ProjectGenerationConfiguration
-@ConditionalOnAmwellSample("sample")
-class SampleContributorConfiguration {
+@ConditionalOnAmwellDynamoDb("sample")
+class DynamoDbContributorConfiguration {
 
 	@Bean
-	io.spring.start.site.extension.sample.SampleContributor sampleContributor() {
-		return new io.spring.start.site.extension.sample.SampleContributor();
+	DynamoDbContributor dynamoDbContributor() {
+		return new DynamoDbContributor();
 	}
 
 }
