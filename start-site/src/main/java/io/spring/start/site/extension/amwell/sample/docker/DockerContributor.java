@@ -46,6 +46,12 @@ public class DockerContributor implements ProjectContributor {
 		File dcDestination = new File(projectRoot.toString() + dockerComposeFileName);
 		FileUtils.copyFile(dcSource, dcDestination);
 
+		// .dockerignore
+		String dockerIgnoreFileName = "/.dockerignore";
+		File diSource = new File(sourceBaseDir + dockerIgnoreFileName);
+		File diDestination = new File(projectRoot.toString() + dockerComposeFileName);
+		FileUtils.copyFile(diSource, diDestination);
+
 		// documentation
 		String documentationDir = "/documentation";
 		File docSource = new File(sourceBaseDir + documentationDir);
@@ -58,7 +64,7 @@ public class DockerContributor implements ProjectContributor {
 		File fDestination = new File(projectRoot.toString() + formatterFileName);
 		FileUtils.copyFile(fSource, fDestination);
 
-		// formatter.xml
+		// lombok.config
 		String lombakFileName = "/lombok.config";
 		File lSource = new File(sourceBaseDir + lombakFileName);
 		File lDestination = new File(projectRoot.toString() + lombakFileName);
